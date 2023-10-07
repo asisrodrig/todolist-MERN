@@ -1,2 +1,12 @@
-const a = "Hello World";
-console.log(a)
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/hello', (req, res) => {
+  res.send('Hello World!')
+  console.log("asis")
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
